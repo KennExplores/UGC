@@ -189,6 +189,97 @@
   /* ── PACKAGES ── */
   #packages { padding-bottom: 12vh; }
 
+  /* SELL BY CHAT */
+  .sbc-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #2a2a2a;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 4rem;
+  }
+
+  @media(max-width:600px){ .sbc-results { grid-template-columns: 1fr; } }
+
+  .sbc-stat {
+    background: #141414;
+    padding: 2rem;
+  }
+
+  .sbc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: #C9922A;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbc-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #F0EDE8;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbc-sub {
+    font-size: 0.75rem;
+    color: #777;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .sbc-packages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media(max-width:640px){ .sbc-packages { grid-template-columns: 1fr; } }
+
+  .sbc-card {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 0;
+    padding: 2.5rem;
+  }
+
+  .sbc-featured {
+    border-color: #C9922A;
+    background: #161410;
+  }
+
+  .sbc-note {
+    background: rgba(201,146,42,0.05);
+    border-left: 3px solid #C9922A;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .sbc-note p {
+    font-size: 0.8rem;
+    color: #777;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .sbc-hours {
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #2a2a2a;
+    background: #141414;
+  }
+
+  .sbc-hours p {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+  }
+
   .packages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1188,6 +1279,7 @@
   <button class="nav-tab active" onclick="scrollToSection('about')">About</button>
   <button class="nav-tab" onclick="scrollToSection('process')">How It Works</button>
   <button class="nav-tab" onclick="scrollToSection('packages')">Packages</button>
+  <button class="nav-tab" onclick="scrollToSection('sellbychat')">Sell By Chat</button>
   <button class="nav-tab" onclick="openLegal('modal-portfolio')">Portfolio</button>
   <button class="nav-tab" onclick="scrollToSection('booking')">Book Now</button>
 </nav>
@@ -1385,6 +1477,81 @@
 
 </section>
 
+<!-- SELL BY CHAT -->
+<section id="sellbychat">
+  <p class="section-label">Beyond content</p>
+  <h2 class="section-title">Sell By Chat</h2>
+  <p class="section-body">Content brings people in. Conversations convert them. I manage your DMs and social conversations to turn warm leads into paying customers — five days a week, consistently.</p>
+
+  <div class="sbc-results">
+    <div class="sbc-stat">
+      <p class="sbc-num">8x</p>
+      <p class="sbc-label">DM-attributed sales growth</p>
+      <p class="sbc-sub">From 5% to as high as 39% of monthly revenue coming directly from DMs</p>
+    </div>
+    <div class="sbc-stat">
+      <p class="sbc-num">90%+</p>
+      <p class="sbc-label">Call show rate</p>
+      <p class="sbc-sub">Industry standard sits around 50–60%. Consistent nurturing is the difference.</p>
+    </div>
+    <div class="sbc-stat">
+      <p class="sbc-num">50%+</p>
+      <p class="sbc-label">Close rate from calls booked</p>
+      <p class="sbc-sub">Qualified, nurtured leads convert. Cold leads don't.</p>
+    </div>
+  </div>
+
+  <div class="sbc-packages">
+
+    <div class="sbc-card">
+      <p class="pkg-tier">Option 01</p>
+      <h3 class="pkg-name">Sell By Chat</h3>
+      <p class="pkg-price">$1,500</p>
+      <p class="pkg-price-note">Per month — AUD · first 3 months</p>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>DM management 5 days/week</li>
+        <li>Lead nurturing and qualification</li>
+        <li>Objection handling</li>
+        <li>Follow-up sequences</li>
+        <li>Weekly conversion reporting</li>
+        <li>Increases to $2,500/mo after 3 months</li>
+      </ul>
+      <a class="pkg-cta" href="#booking" onclick="selectPackage('Sell By Chat — $1,500/mo')">Get Started</a>
+    </div>
+
+    <div class="sbc-card sbc-featured">
+      <p class="pkg-tier">Option 02 — Most Popular</p>
+      <h3 class="pkg-name">Hybrid UGC + Chat</h3>
+      <p class="pkg-price">$2,500</p>
+      <p class="pkg-price-note">Per month — AUD · first 3 months</p>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>4–6 UGC videos per month</li>
+        <li>Lifestyle photos included</li>
+        <li>Full ad rights on all content</li>
+        <li>DM management 5 days/week</li>
+        <li>Lead nurturing and qualification</li>
+        <li>Comment replies and engagement</li>
+        <li>Weekly conversion reporting</li>
+        <li>Content that brings them in, chat that closes them</li>
+        <li>Increases to $3,500/mo after 3 months</li>
+      </ul>
+      <a class="pkg-cta" href="#booking" onclick="selectPackage('Hybrid UGC + Chat — $2,500/mo')">Get Started</a>
+    </div>
+
+  </div>
+
+  <div class="sbc-note">
+    <p>These results were achieved for a coaching and education business over 12+ months of consistent DM management. Every lead was nurtured with a genuine, human approach — not scripts or automation.</p>
+  </div>
+
+  <div class="sbc-hours">
+    <p>Need dedicated chat coverage during specific hours? That's available at an additional rate — get in touch to discuss.</p>
+  </div>
+
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio">
   <p class="section-label">Selected Work</p>
@@ -1531,10 +1698,19 @@
       <label for="package">Package</label>
       <select id="package" name="package" required>
         <option value="" disabled selected>Select a package</option>
-        <option value="Starter — From $400">Starter — From $400 AUD</option>
-        <option value="Growth — From $1,050">Growth — From $1,050 AUD</option>
-        <option value="Premium — From $1,600">Premium — From $1,600 AUD</option>
-        <option value="Custom / Retainer — Let's talk">Custom / Retainer — Let's talk</option>
+        <optgroup label="UGC Content">
+          <option value="Starter — From $400">Starter — From $400 AUD</option>
+          <option value="Growth — From $1,050">Growth — From $1,050 AUD</option>
+          <option value="Premium — From $1,600">Premium — From $1,600 AUD</option>
+          <option value="Custom / Retainer — Let's talk">Custom / Retainer — Let's talk</option>
+        </optgroup>
+        <optgroup label="Sell By Chat">
+          <option value="Sell By Chat — $1,500/mo">Sell By Chat — $1,500/mo (first 3 months)</option>
+          <option value="Hybrid UGC + Chat — $2,500/mo">Hybrid UGC + Chat — $2,500/mo (first 3 months)</option>
+        </optgroup>
+        <optgroup label="Other">
+          <option value="Dedicated Chat Hours — Let's talk">Dedicated Chat Hours — Let's talk</option>
+        </optgroup>
       </select>
     </div>
 
