@@ -1435,6 +1435,27 @@
   .vid-more { margin-top: 3vh; }
   .vid-more a { color: var(--accent); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; }
   .vid-more a:hover { color: var(--white); }
+
+  /* ── MOBILE OPTIMISATION ── */
+  html { -webkit-text-size-adjust: 100%; }
+  @media (max-width: 600px) {
+    .hero-name { font-size: clamp(3.6rem, 16vw, 6rem); overflow-wrap: anywhere; }
+    .hero-tagline { margin-top: 1.6rem; }
+    .vid-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-top: 3vh; }
+    .vid-title { font-size: 1.05rem; }
+    .vid-brand { font-size: 0.58rem; letter-spacing: 0.12em; }
+    .vid-play { width: 44px; height: 44px; margin: -22px 0 0 -22px; }
+    .vid-play::before { left: 17px; top: 13px; border-left-width: 13px; border-top-width: 9px; border-bottom-width: 9px; }
+    .pc { padding: 1.5rem 1.3rem 1.3rem; }
+    .pc-price { font-size: 3rem; }
+    .pc-grid { gap: 0.9rem; }
+    section[id] { scroll-margin-top: 56px; }
+    .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
+  }
+  @media (max-width: 480px) {
+    .nav-tabs { padding: 0 3vw; justify-content: space-between; }
+    .nav-tab { padding: 1rem 0.3rem; font-size: 0.58rem; letter-spacing: 0.06em; }
+  }
 </style>
 </head>
 <body>
